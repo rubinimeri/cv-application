@@ -1,5 +1,6 @@
 import { useState } from "react"
 import exampleData from "./exampleData"
+import Resume from "./components/Resume";
 
 import './styles/App.css'
 
@@ -14,7 +15,13 @@ function App() {
 
   return (
     <main className="app">
-
+      <Resume 
+      personalDetails={personalInfo}
+      summary={summary}
+      educationArray={educationalExperience}
+      workArray={professionalExperience}
+      skills={skills}
+      certifications={certifications} />
     </main>
     
   )

@@ -1,6 +1,7 @@
 import PersonalDetails from "./PersonalDetails/PersonalDetails"
 import Summary from "./Summary"
 import Education from "./Education/Education"
+import Skills from "./Skills/Skills"
 
 function Resume({ 
     personalDetails, summary, educationArray, 
@@ -18,6 +19,7 @@ function Resume({
              <div className="education-work">
                 <div className="left">
                     <Education educationArray={educationArray} />
+                    <Skills skills={skills} />
                 </div>
                 <div className="right">
 

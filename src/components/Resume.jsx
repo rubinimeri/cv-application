@@ -3,6 +3,7 @@ import Summary from "./Summary/Summary"
 import Education from "./Education/Education"
 import Skills from "./Skills/Skills"
 import Certifications from "./Certifications/Certifications"
+import WorkExperience from "./WorkExperience/WorkExperience"
 
 function Resume({ 
     personalDetails, summary, educationArray, 
@@ -24,7 +25,7 @@ function Resume({
                     <Certifications certifications={certifications} />
                 </div>
                 <div className="right">
-
+                    <WorkExperience workArray={workArray} />
                 </div>
              </div>
         </div>

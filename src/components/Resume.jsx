@@ -2,6 +2,7 @@ import PersonalDetails from "./PersonalDetails/PersonalDetails"
 import Summary from "./Summary/Summary"
 import Education from "./Education/Education"
 import Skills from "./Skills/Skills"
+import Certifications from "./Certifications/Certifications"
 
 function Resume({ 
     personalDetails, summary, educationArray, 

@@ -2,7 +2,10 @@ function Skills({ skills }) {
     const skillItems = skills.map(skill => <li key={skill.id}>{skill.skill}</li>)
 
     return(
-        <ul className="skills">{skillItems}</ul>
+        <div>
+            <h2>SKILLS</h2>
+            <ul className="skills">{skillItems}</ul>
+        </div>
     )
 }
 

@@ -7,13 +7,13 @@ function PersonalDetails({ name, jobTitle, number, email, location }) {
             </div>
             <div>
                 <p>
-                    {number}
+                    {number} <i className="fa-solid fa-phone"></i>
                 </p>
                 <p>
-                    {email}
+                    {email} <i className="fa-solid fa-envelope"></i>
                 </p>
                 <p>
-                    {location}
+                    {location} <i className="fa-solid fa-location-dot"></i>
                 </p>
             </div>
         </div>

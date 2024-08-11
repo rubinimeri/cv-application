@@ -1,4 +1,5 @@
 import PersonalDetails from "./PersonalDetails/PersonalDetails"
+import Summary from "./Summary"
 
 function Resume({ 
     personalDetails, summary, educationArray, 
@@ -12,6 +13,7 @@ function Resume({
              number={personalDetails.number}
              email={personalDetails.email}
              location={personalDetails.location} />
+             <Summary summary={summary} />
         </div>
     )
 }

@@ -4,7 +4,7 @@ function SkillCard({ id, value, onDelete, onChange }) {
             <input type="text" value={value} id={id} onChange={onChange}/>
             <button 
              className="delete-skill" 
-             id={id}
+             name={id}
              onClick={(e) => {
                 e.preventDefault();
                 onDelete(e)

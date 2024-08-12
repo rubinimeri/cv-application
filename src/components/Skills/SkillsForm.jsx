@@ -2,8 +2,8 @@ import SkillCard from "./SkillCard"
 
 function SkillsForm({ skills, setSkills }) {
     function handleDelete(e) {
-        const { id } = e.target
-        setSkills(skills.filter(skill => skill.id !== id))
+        const { name } = e.target
+        setSkills(skills.filter(skill => skill.id !== name))
     }
 
     function handleChange(e) {

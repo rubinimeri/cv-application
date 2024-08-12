@@ -6,6 +6,7 @@ import SummaryForm from "./components/Summary/SummaryForm";
 import EducationForm from "./components/Education/EducationForm";
 import WorkForm from "./components/WorkExperience/WorkForm";
 import SkillsForm from "./components/Skills/SkillsForm";
+import CertificationsForm from "./components/Certifications/CertificationsForm";
 
 import './styles/App.css'
 
@@ -36,6 +37,9 @@ function App() {
         <SkillsForm 
          skills={skills} 
          setSkills={setSkills} />
+        <CertificationsForm
+         certifications={certifications}
+         setCertifications={setCertifications} />
       </div>
       <Resume 
       personalDetails={personalInfo}

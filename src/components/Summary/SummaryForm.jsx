@@ -1,4 +1,4 @@
-import InputGroup from "../../InputGroup"
+import InputGroup from "../InputGroup"
 
 function SummaryForm({ summary, setSummary }) {
     function handleSummaryChange(e) {

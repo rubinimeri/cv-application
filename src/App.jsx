@@ -3,6 +3,7 @@ import exampleData from "./exampleData"
 import Resume from "./components/Resume";
 import PersonalDetailsForm from "./components/PersonalDetails/PersonalDetailsForm";
 import SummaryForm from "./components/Summary/SummaryForm";
+import EducationForm from "./components/Education/EducationForm";
 
 import './styles/App.css'
 
@@ -24,6 +25,9 @@ function App() {
         <SummaryForm
          summary={summary}
          setSummary={setSummary} />
+        <EducationForm 
+         educationArray={educationalExperience}
+         setEducationArray={setEducationalExperience} />
       </div>
       <Resume 
       personalDetails={personalInfo}

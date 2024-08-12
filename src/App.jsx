@@ -2,6 +2,7 @@ import { useState } from "react"
 import exampleData from "./exampleData"
 import Resume from "./components/Resume";
 import PersonalDetailsForm from "./components/PersonalDetails/PersonalDetailsForm";
+import SummaryForm from "./components/Summary/SummaryForm";
 
 import './styles/App.css'
 
@@ -20,6 +21,9 @@ function App() {
         <PersonalDetailsForm 
          personalInfo={personalInfo}
          setPersonalInfo={setPersonalInfo} />
+        <SummaryForm
+         summary={summary}
+         setSummary={setSummary} />
       </div>
       <Resume 
       personalDetails={personalInfo}

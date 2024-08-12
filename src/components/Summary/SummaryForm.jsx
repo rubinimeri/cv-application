@@ -1,5 +1,3 @@
-import InputGroup from "../InputGroup"
-
 function SummaryForm({ summary, setSummary }) {
     function handleSummaryChange(e) {
         setSummary(e.target.value)
@@ -7,12 +5,13 @@ function SummaryForm({ summary, setSummary }) {
     return(
         <form action="" className="summary-form">
             <h2>Summary</h2>
-            <InputGroup
-             type="textarea"
-             name="summary"
-             value={summary}
-             changeHandler={handleSummaryChange}
-             id="summary" />
+            <textarea 
+             name="summary" 
+             id="summary" 
+             value={summary} 
+             onChange={handleSummaryChange}>
+            {summary}
+             </textarea>
         </form>
     )
 }

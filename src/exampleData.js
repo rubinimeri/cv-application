@@ -60,7 +60,14 @@ const exampleData = {
             startDate: '2020',
             endDate: '2024',
             id: crypto.randomUUID()
-        }
+        },
+        {
+            schoolName: 'SHMQSH "Zef Lush Marku"',
+            degreeName: 'Computer Science',
+            startDate: '2020',
+            endDate: '2024',
+            id: crypto.randomUUID()
+        }, 
     ]
 }
 

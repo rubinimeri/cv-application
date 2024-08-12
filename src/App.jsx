@@ -1,6 +1,7 @@
 import { useState } from "react"
 import exampleData from "./exampleData"
 import Resume from "./components/Resume";
+import PersonalDetailsForm from "./components/PersonalDetails/PersonalDetailsForm";
 
 import './styles/App.css'
 
@@ -15,6 +16,11 @@ function App() {
 
   return (
     <main className="app">
+      <div className="form-container">
+        <PersonalDetailsForm 
+         personalInfo={personalInfo}
+         setPersonalInfo={setPersonalInfo} />
+      </div>
       <Resume 
       personalDetails={personalInfo}
       summary={summary}

@@ -5,6 +5,7 @@ import PersonalDetailsForm from "./components/PersonalDetails/PersonalDetailsFor
 import SummaryForm from "./components/Summary/SummaryForm";
 import EducationForm from "./components/Education/EducationForm";
 import WorkForm from "./components/WorkExperience/WorkForm";
+import SkillsForm from "./components/Skills/SkillsForm";
 
 import './styles/App.css'
 
@@ -32,6 +33,9 @@ function App() {
         <WorkForm 
          workExperience={professionalExperience}
          setWorkExperience={setProfessionalExperience} />
+        <SkillsForm 
+         skills={skills} 
+         setSkills={setSkills} />
       </div>
       <Resume 
       personalDetails={personalInfo}

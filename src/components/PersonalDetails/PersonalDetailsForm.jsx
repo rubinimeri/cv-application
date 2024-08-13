@@ -11,10 +11,17 @@ function PersonalDetailsForm({ personalInfo, setPersonalInfo }) {
             <h2>Personal Details</h2>
             <InputGroup
              type="text"
-             id="name"
-             name="name"
-             value={personalInfo.name}
+             id="first-name"
+             name="firstName"
+             value={personalInfo.firstName}
              labelText="Full Name"
+             changeHandler={handleInputChange} />
+            <InputGroup
+             type="text"
+             id="last-name"
+             name="lastName"
+             value={personalInfo.lastName}
+             labelText="Last Name"
              changeHandler={handleInputChange} />
             <InputGroup
              type="text"

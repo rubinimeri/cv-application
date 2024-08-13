@@ -1,7 +1,7 @@
 function VisibilityButton({ isShown, setToggle, showIndex }) {
     return(
         <>
-            <button onClick={() => setToggle(showIndex)} >
+            <button className="visibility-button" onClick={() => setToggle(showIndex)} >
                 {isShown ? 
                     <i className="fa-solid fa-angle-up"></i> :
                     <i className="fa-solid fa-angle-down"></i>

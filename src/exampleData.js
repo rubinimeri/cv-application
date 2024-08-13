@@ -1,6 +1,7 @@
 const exampleData = {
     personalInfo: {
-        name: 'Rubin Imeri',
+        firstName: 'Rubin',
+        lastName: 'Imeri',
         jobTitle: 'Fullstack Developer',
         number: '+389-72-769-233',
         email: 'rubinimeri6@gmail.com',

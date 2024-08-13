@@ -3,6 +3,7 @@ import InputGroup from "../InputGroup"
 function WorkFormCard(props) {
     const { id, jobTitle, companyName, startDate, endDate, description } = props
     const { workExperience, setWorkExperience } = props
+    const { handleCancel, handleSave } = props;
 
     function handleInputChange(e) {
         const { name, value } = e.target
@@ -11,6 +12,7 @@ function WorkFormCard(props) {
     }
 
     function handleDelete() {
+        handleCancel();
         setWorkExperience(workExperience.filter(work => 
             work.id !== id
         ))
@@ -53,7 +55,15 @@ function WorkFormCard(props) {
              value={description}
              labelText="Description"
              changeHandler={handleInputChange} />
-             <button onClick={handleDelete}>Delete</button>
+             <button 
+              onClick={handleSave}
+              className="save-btn">Save</button>
+             <button 
+              onClick={handleDelete}
+              className="delete-btn">Delete</button>
+             <button 
+              onClick={handleCancel}
+              className="cancel-btn">Cancel</button>
         </div>
     )
 }

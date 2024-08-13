@@ -18,7 +18,7 @@ function SkillsForm({ skills, setSkills }) {
     }
 
     return(
-        <form action="" className="skills-form">
+        <div className="skills-form">
             <h2>Skills</h2>
             {skills.map(skill =>
                 <SkillCard 
@@ -28,11 +28,8 @@ function SkillsForm({ skills, setSkills }) {
                  onDelete={handleDelete}
                  onChange={handleChange} />
             )}
-            <button onClick={(e) => {
-                e.preventDefault();
-                handleNewSkill();
-            }}>Add New Skill</button>
-        </form>
+            <button onClick={handleNewSkill}>Add New Skill</button>
+        </div>
     )
 }
 

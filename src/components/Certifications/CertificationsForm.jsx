@@ -14,13 +14,12 @@ function CertificationsForm({ certifications, setCertifications }) {
         ))
     }
 
-    function handleNewCertification(e) {
-        e.preventDefault();
+    function handleNewCertification() {
         setCertifications([...certifications, {certification: '', id: crypto.randomUUID()}])
     }
 
     return(
-        <form action="" className="certifications-form">
+        <div className="certifications-form">
             <h2>Certifications</h2>
             {certifications.map(certification =>
                 <CertificationsFormCard 
@@ -30,7 +29,7 @@ function CertificationsForm({ certifications, setCertifications }) {
                  onChange={handleChange} />
             )}
             <button onClick={handleNewCertification}>Add New Certification</button>
-        </form>
+        </div>
     )
 }
 

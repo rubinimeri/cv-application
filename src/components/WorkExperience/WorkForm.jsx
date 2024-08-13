@@ -2,7 +2,7 @@ import WorkFormCard from "./WorkFormCard"
 
 function WorkForm({ workExperience, setWorkExperience }) {
     return(
-        <form action="" className="work-form">
+        <div className="work-form">
             <h2>Professional Experience</h2>
             {workExperience.map(work => 
                 <WorkFormCard 
@@ -11,7 +11,7 @@ function WorkForm({ workExperience, setWorkExperience }) {
                 workExperience={workExperience}
                 setWorkExperience={setWorkExperience} />
             )}
-        </form>
+        </div>
     )
 }
 

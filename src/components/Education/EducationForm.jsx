@@ -2,7 +2,7 @@ import EducationFormCard from "./EducationFormCard"
 
 function EducationForm({ educationArray, setEducationArray }) {
     return(
-        <form action="" className="education-form">
+        <div className="education-form">
             <h2>Education</h2>
             {educationArray.map(education => 
             <EducationFormCard
@@ -10,7 +10,7 @@ function EducationForm({ educationArray, setEducationArray }) {
              {...education}
              educationArray={educationArray}
              setEducationArray={setEducationArray} />)}
-        </form>
+        </div>
     )
 }
 

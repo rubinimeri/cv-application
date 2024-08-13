@@ -3,7 +3,7 @@ function SummaryForm({ summary, setSummary }) {
         setSummary(e.target.value)
     }
     return(
-        <form action="" className="summary-form">
+        <div action="" className="summary-form">
             <h2>Summary</h2>
             <textarea 
              name="summary" 
@@ -12,7 +12,7 @@ function SummaryForm({ summary, setSummary }) {
              onChange={handleSummaryChange}>
             {summary}
              </textarea>
-        </form>
+        </div>
     )
 }
 

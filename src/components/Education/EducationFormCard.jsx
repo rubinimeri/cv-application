@@ -3,6 +3,7 @@ import InputGroup from "../InputGroup"
 function EducationFormCard(props) {
     const { id, schoolName, degreeName, startDate, endDate } = props;
     const { educationArray, setEducationArray } = props;
+    const { handleCancel, handleSave } = props;
 
     function handleInputChange(e) {
         const { name, value } = e.target
@@ -12,6 +13,7 @@ function EducationFormCard(props) {
     }
 
     function handleDelete() {
+        handleCancel();
         setEducationArray(educationArray.filter(education => 
             education.id !== id
         ))
@@ -46,7 +48,15 @@ function EducationFormCard(props) {
              value={endDate}
              labelText="End Date"
              changeHandler={handleInputChange} />
-             <button onClick={handleDelete}>Delete</button>
+             <button 
+              onClick={handleSave}
+              className="save-btn">Save</button>
+             <button 
+              onClick={handleDelete}
+              className="delete-btn">Delete</button>
+             <button 
+              onClick={handleCancel}
+              className="cancel-btn">Cancel</button>
         </div>
     )
 }

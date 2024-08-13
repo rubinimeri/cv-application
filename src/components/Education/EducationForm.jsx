@@ -25,10 +25,10 @@ function EducationForm({ educationArray, setEducationArray, isShown, toggleShow 
 
     function handleAddEducation() {
         const newEducation = {
-            schoolName: null,
-            degreeName: null,
-            startDate: null,
-            endDate: null,
+            schoolName: '',
+            degreeName: '',
+            startDate: '',
+            endDate: '',
             id: crypto.randomUUID()
         }
         setEducationArray([...educationArray, newEducation])

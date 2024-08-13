@@ -10,6 +10,12 @@ function EducationFormCard(props) {
         setEducationArray(educationArray.map(education => 
             education.id === id ? {...education, [name]: value} : education))
     }
+
+    function handleDelete() {
+        setEducationArray(educationArray.filter(education => 
+            education.id !== id
+        ))
+    }
     return(
         <div className="education-form-card">
             <InputGroup 
@@ -40,6 +46,7 @@ function EducationFormCard(props) {
              value={endDate}
              labelText="End Date"
              changeHandler={handleInputChange} />
+             <button onClick={handleDelete}>Delete</button>
         </div>
     )
 }

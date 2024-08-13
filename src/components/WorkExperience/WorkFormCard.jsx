@@ -10,6 +10,12 @@ function WorkFormCard(props) {
             work.id === id ? {...work, [name]: value} : work))
     }
 
+    function handleDelete() {
+        setWorkExperience(workExperience.filter(work => 
+            work.id !== id
+        ))
+    }
+
     return(
         <div className="work-form-card">
             <InputGroup
@@ -47,6 +53,7 @@ function WorkFormCard(props) {
              value={description}
              labelText="Description"
              changeHandler={handleInputChange} />
+             <button onClick={handleDelete}>Delete</button>
         </div>
     )
 }

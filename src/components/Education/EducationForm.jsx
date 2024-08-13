@@ -1,14 +1,7 @@
 import { useState } from "react";
 import VisibilityButton from "../VisibilityButton"
 import EducationFormCard from "./EducationFormCard"
-
-function FormTitle({ id, title, handleClick }) {
-    return(
-        <button className="form-title" id={id} onClick={handleClick}>
-            {title}
-        </button>
-    )
-}
+import FormTitle from "../FormTitle";
 
 function EducationForm({ educationArray, setEducationArray, isShown, toggleShow }) {
     const [selectedForm, setSelectedForm] = useState(null);

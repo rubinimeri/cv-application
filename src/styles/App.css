@@ -1,3 +1,37 @@
 html, body {
     min-height: 100vh;
 }
+body{
+    background-color: #eeeeee;
+    box-sizing: border-box;
+}
+main {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    max-width: 1300px;
+    border: 1px solid;
+    column-gap: 15px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.form-container {
+    display: grid;
+    row-gap: 15px;
+}
+
+.form-container > div, form {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.resume {
+    max-width: 900px;
+    background-color: #fff;
+    padding: 0 60px;
+    color: #565656;
+}

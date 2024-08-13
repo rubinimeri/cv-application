@@ -1,8 +1,8 @@
-function PersonalDetails({ name, jobTitle, number, email, location }) {
+function PersonalDetails({ firstName, lastName, jobTitle, number, email, location }) {
     return(
         <div className="personal-details">
             <div>
-                <h1>{name}</h1>
+                <h1>{firstName} <span>{lastName}</span></h1>
                 <p>{jobTitle}</p>
             </div>
             <div>

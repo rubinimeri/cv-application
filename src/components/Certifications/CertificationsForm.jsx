@@ -1,6 +1,7 @@
 import CertificationsFormCard from "./CertificationsFormCard"
+import VisibilityButton from "../VisibilityButton"
 
-function CertificationsForm({ certifications, setCertifications }) {
+function CertificationsForm({ certifications, setCertifications, isShown, toggleShow }) {
     function handleDelete(e) {
         const { name } = e.target
         setCertifications(certifications.filter(certification => 
@@ -20,15 +21,21 @@ function CertificationsForm({ certifications, setCertifications }) {
 
     return(
         <div className="certifications-form">
-            <h2>Certifications</h2>
-            {certifications.map(certification =>
+            <div>
+                <h2>Certifications</h2>
+                <VisibilityButton
+                 isShown={isShown}
+                 setToggle={toggleShow}
+                 showIndex={5} />
+            </div>
+            {isShown && certifications.map(certification =>
                 <CertificationsFormCard 
                  key={certification.id}
                  {...certification}
                  onDelete={handleDelete}
                  onChange={handleChange} />
             )}
-            <button onClick={handleNewCertification}>Add New Certification</button>
+            {isShown && <button onClick={handleNewCertification}>Add New Certification</button>}
         </div>
     )
 }

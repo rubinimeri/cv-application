@@ -1,6 +1,7 @@
+import VisibilityButton from "../VisibilityButton"
 import SkillCard from "./SkillCard"
 
-function SkillsForm({ skills, setSkills }) {
+function SkillsForm({ skills, setSkills, isShown, toggleShow }) {
     function handleDelete(e) {
         const { name } = e.target
         setSkills(skills.filter(skill => skill.id !== name))
@@ -19,8 +20,14 @@ function SkillsForm({ skills, setSkills }) {
 
     return(
         <div className="skills-form">
-            <h2>Skills</h2>
-            {skills.map(skill =>
+            <div>
+                <h2>Skills</h2>
+                <VisibilityButton
+                 isShown={isShown}
+                 setToggle={toggleShow}
+                 showIndex={4} />
+            </div>
+            {isShown && skills.map(skill =>
                 <SkillCard 
                  key={skill.id}
                  id={skill.id}
@@ -28,7 +35,7 @@ function SkillsForm({ skills, setSkills }) {
                  onDelete={handleDelete}
                  onChange={handleChange} />
             )}
-            <button onClick={handleNewSkill}>Add New Skill</button>
+            {isShown && <button onClick={handleNewSkill}>Add New Skill</button>}
         </div>
     )
 }

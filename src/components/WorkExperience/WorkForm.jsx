@@ -1,10 +1,17 @@
 import WorkFormCard from "./WorkFormCard"
+import VisibilityButton from "../VisibilityButton"
 
-function WorkForm({ workExperience, setWorkExperience }) {
+function WorkForm({ workExperience, setWorkExperience, isShown, toggleShow }) {
     return(
         <div className="work-form">
-            <h2>Professional Experience</h2>
-            {workExperience.map(work => 
+            <div>
+                <h2>Professional Experience</h2>
+                <VisibilityButton
+                 isShown={isShown}
+                 setToggle={toggleShow}
+                 showIndex={3} />
+            </div>
+            {isShown && workExperience.map(work => 
                 <WorkFormCard 
                 key={work.id} 
                 {...work}

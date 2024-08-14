@@ -3,7 +3,7 @@ function CertificationsFormCard(props) {
 
     return(
         <div className="certification-card">
-            <input type="text" value={certification} id={id} onChange={onChange}/>
+            <textarea value={certification} id={id} onChange={onChange}/>
             <button 
              className="delete-certification" 
              name={id}

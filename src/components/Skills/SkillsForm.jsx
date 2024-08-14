@@ -35,7 +35,7 @@ function SkillsForm({ skills, setSkills, isShown, toggleShow }) {
                  onDelete={handleDelete}
                  onChange={handleChange} />
             )}
-            {isShown && <button onClick={handleNewSkill}>Add New Skill</button>}
+            {isShown && <button className="add-btn" onClick={handleNewSkill}>+ Skill</button>}
         </div>
     )
 }

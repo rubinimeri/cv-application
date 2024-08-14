@@ -35,7 +35,7 @@ function CertificationsForm({ certifications, setCertifications, isShown, toggle
                  onDelete={handleDelete}
                  onChange={handleChange} />
             )}
-            {isShown && <button onClick={handleNewCertification}>Add New Certification</button>}
+            {isShown && <button className="add-btn" onClick={handleNewCertification}>+ Certification</button>}
         </div>
     )
 }

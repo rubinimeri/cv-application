@@ -3,13 +3,10 @@ function SkillCard({ id, value, onDelete, onChange }) {
         <div className="skill-card">
             <textarea value={value} id={id} onChange={onChange}/>
             <button 
-             className="delete-skill" 
+             className="delete-skill delete-btn" 
              name={id}
-             onClick={(e) => {
-                e.preventDefault();
-                onDelete(e)
-             }}>
-                Delete Skill
+             onClick={onDelete}>
+                <i className="fa-regular fa-trash-can"></i>
             </button>
         </div>
     )

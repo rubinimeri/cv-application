@@ -48,15 +48,19 @@ function EducationFormCard(props) {
              value={endDate}
              labelText="End Date"
              changeHandler={handleInputChange} />
-             <button 
-              onClick={handleSave}
-              className="save-btn">Save</button>
-             <button 
-              onClick={handleDelete}
-              className="delete-btn">Delete</button>
-             <button 
-              onClick={handleCancel}
-              className="cancel-btn">Cancel</button>
+             <div className="buttons">
+                 <button
+                  onClick={handleSave}
+                  className="save-btn">Save</button>
+                 <button
+                  onClick={handleDelete}
+                  className="delete-btn">
+                    <i className="fa-regular fa-trash-can"></i>
+                  </button>
+                 <button
+                  onClick={handleCancel}
+                  className="cancel-btn">Cancel</button>
+             </div>
         </div>
     )
 }

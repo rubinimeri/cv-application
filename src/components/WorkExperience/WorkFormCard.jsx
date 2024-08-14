@@ -48,22 +48,28 @@ function WorkFormCard(props) {
              value={endDate}
              labelText="End Date"
              changeHandler={handleInputChange} />
-             <InputGroup
-             type="text"
-             id="description"
-             name="description"
-             value={description}
-             labelText="Description"
-             changeHandler={handleInputChange} />
-             <button 
-              onClick={handleSave}
-              className="save-btn">Save</button>
-             <button 
-              onClick={handleDelete}
-              className="delete-btn">Delete</button>
-             <button 
-              onClick={handleCancel}
-              className="cancel-btn">Cancel</button>
+             <div className="input-group">
+                 <label htmlFor="description">Description</label>
+                 <textarea
+                  name="description"
+                  id="description"
+                  value={description}
+                  onChange={handleInputChange}>
+                  </textarea>
+             </div>
+             <div className="buttons">
+                 <button
+                  onClick={handleSave}
+                  className="save-btn">Save</button>
+                 <button
+                  onClick={handleDelete}
+                  className="delete-btn">
+                    <i className="fa-regular fa-trash-can"></i>
+                  </button>
+                 <button
+                  onClick={handleCancel}
+                  className="cancel-btn">Cancel</button>
+             </div>
         </div>
     )
 }

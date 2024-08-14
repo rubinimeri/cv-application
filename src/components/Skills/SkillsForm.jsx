@@ -3,7 +3,8 @@ import SkillCard from "./SkillCard"
 
 function SkillsForm({ skills, setSkills, isShown, toggleShow }) {
     function handleDelete(e) {
-        const { name } = e.target
+        const button = e.target.closest('button');
+        const { name } = button;
         setSkills(skills.filter(skill => skill.id !== name))
     }
 

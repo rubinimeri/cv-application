@@ -3,7 +3,8 @@ import VisibilityButton from "../VisibilityButton"
 
 function CertificationsForm({ certifications, setCertifications, isShown, toggleShow }) {
     function handleDelete(e) {
-        const { name } = e.target
+        const button = e.target.closest('button');
+        const { name } = button;
         setCertifications(certifications.filter(certification => 
             certification.id !== name))
     }

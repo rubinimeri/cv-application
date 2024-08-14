@@ -5,13 +5,10 @@ function CertificationsFormCard(props) {
         <div className="certification-card">
             <textarea value={certification} id={id} onChange={onChange}/>
             <button 
-             className="delete-certification" 
+             className="delete-btn" 
              name={id}
-             onClick={(e) => {
-                e.preventDefault();
-                onDelete(e)
-             }}>
-                Delete Certification
+             onClick={onDelete}>
+                <i className="fa-regular fa-trash-can"></i>
             </button>
         </div>
     )

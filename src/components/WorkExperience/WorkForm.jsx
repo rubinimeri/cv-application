@@ -63,7 +63,7 @@ function WorkForm({ workExperience, setWorkExperience, isShown, toggleShow }) {
                       )}
                       <button 
                        className="add-btn"
-                       onClick={handleAddWork} >+ Education</button>
+                       onClick={handleAddWork} >+ Experience</button>
                     </>
                   )
                 }
